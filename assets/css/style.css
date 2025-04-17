@@ -1,1 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
+
+/* #38b6ff */
+/* #acb3b6 */
+
+@theme {
+    --font-rb: "Roboto", system-ui;    
+    --font-inter: "Inter", system-ui;
+}
+
+header.active .menuMobile {
+    @apply translate-x-0;
+}
+
+header.active .lineMenuMobile:nth-child(2) {
+    @apply right-2
+}
+
+
+.secao {
+    @apply px-10;
+}
+
+.navBtns {
+    @apply bg-[#ACB3BC] p-2 w-max rounded-full;
+}
+
+.button {
+    @apply bg-white p-2 rounded-full font-inter text-[14pt] border-2 border-[#38B6FF] text-[#38B6FF] hover:bg-[#38B6FF] hover:text-white cursor-pointer transition-all ease-in duration-100 hover:shadow-2xl hover:shadow-[#38B6FF];
+}
+
+.button0 {
+    @apply bg-transparent;
+}
+
+.linkMenu {
+    @apply text-[13pt] text-[#38B6FF];
+}
+
+.lineMenuMobile {
+    @apply bg-[#38B6FF] w-9 h-1 m-1 rounded-full relative;
+}
