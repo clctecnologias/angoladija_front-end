@@ -17,36 +17,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="flex items-center justify-between p-10 h-[4rem]">
-        <nav>
+    <header class="flex items-center justify-between p-10 h-[4rem] menu">
+        <nav class="z-10">
             <a href="#"><img src="assets/img/logo.png" alt="" srcset="" class="w-[110px]"></a>
         </nav>
-        <nav class="flex gap-5 items-center">
+        <nav class="flex gap-5 items-center navLinksMenu absolute md:relative bg-amber-50 md:bg-white flex flex-col md:flex-row top-0 -translate-y-full md:translate-none  ease-in duration-300 transition-transform w-screen md:w-auto right-0 h-screen md:h-auto justify-around">
             <a href="#" class="linkMenu">Destinations</a>
             <a href="#" class="linkMenu">Who Are We?</a>
             <a href="#" class="linkMenu">Trading Places</a>
             <a href="#" class="linkMenu">Bookings</a>
             <nav class="contentBtns">
-                <a href="#"><button class="btn btn0">Login</button></a>
+                <a href="forms.html"><button class="btn btn0">Login</button></a>
                 <a href="#"><button class="btn">Start Planning Your Trip <i class="fa-solid fa-plane rotate-[-45deg]"></i></button></a>
             </nav>
         </nav>
-        <nav class="hidden">
+        <nav class="md:hidden navMobileHamburguer cursor-pointer block z-10">
             <div class="lineMenuMobile"></div>
             <div class="lineMenuMobile"></div>
             <div class="lineMenuMobile"></div>
         </nav>
     </header>
     <main>
-    <section class="secao flex items-center justify-between gap-8">
-        <nav class="max-w-[55%]">
-            <h5 class="text-[10pt] text-[#38B6FF] uppercase">
+    <section class="secao flex items-center md:flex-row justify-between gap-8 flex-col h-full pt-2.5">
+        <nav>
+            <h5 class="md:text-[10pt] text-[#38B6FF] uppercase text-center md:text-left text-[8pt]">
                 Your gateway to discovering Angola’s beauty starts with AngolaDija
             </h5>
-            <h1 class="text-[30pt] font-inter font-extrabold">
+            <h1 class="md:text-[30pt] font-inter font-extrabold md:text-left text-[15pt] text-center">
                 Explore the Wonders of Angola — One Journey at a Time
             </h1>
-            <p class="font-rb font-light mt-2 mb-6">
+            <p class="font-rb font-light mt-2 mb-6 textParagrafo text-center md:text-left">
                 AngolaDija is your trusted guide to exploring Angola’s most captivating destinations.
                 With expertly curated recommendations, cultural insights, and well-structured itineraries,
                 we provide everything you need to experience the very best the country has to offer.
@@ -82,18 +82,18 @@
             </div>
         </nav>
 
-        <nav class="max-w-[40%]">
+        <nav>
             <img src="assets/img/img_hero.png" alt="Travel illustration" class="w-full h-auto" />
         </nav>
     </section>
     
     <section class="secao">
         <form action="#" class="bg-blue-100 border-2 border-[#38B6FF] p-2 flex flex-col justify-center items-center rounded-[10px] mb-6 relative">
-            <nav class="absolute top-[-15%]">
-                <h4 class="font-inter font-bold text-[20pt] text-center">Now You Can Start Planning Your Trip</h4>
+            <nav>
+                <h4 class="font-inter font-bold md:text-[20pt] text-center text-[12pt]">Now You Can Start Planning Your Trip</h4>
             </nav>
 
-            <div class="flex items-center">
+            <div class="flex items-center flex-col md:flex-row">
 
                 <nav class="navPlanningTrip">
                     <label for="current_location" class="labelTitle">Tell Us Where You Are Now?</label>
@@ -167,59 +167,12 @@
             </div>
             <div>
                 <nav class="absolute m-auto">
-                    <button class="btn">Fly Right Now! <i class="fa-solid fa-plane rotate-[-45deg]"></i></button>
+                    <button class="btn btnForm1 w-max;">Fly Right Now! <i class="fa-solid fa-plane rotate-[-45deg]"></i></button>
                 </nav>
             </div>
         </form>
     </section>  
 
-    <section class="secao">
-        <nav>
-            <h2 class="subtitulo">We Offer Best Services</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio labore suscipit vitae reiciendis rerum repellat, rem, quaerat architecto, ducimus corrupti eveniet tempora. Deleniti, velit atque. Tenetur aliquid facilis recusandae corrupti!</p>
-        </nav>
-
-        <nav>
-            
-        </nav>
-    </section>
-
-    <!-- <form action="#">
-        <div class="flex items-center ">
-            <nav class="w-[40%]">
-                <img src="assets/img/bg1.jpg" alt="" srcset="">
-            </nav>
-            <nav class="p-[20px] flex flex-col bg-red-500 h-[650px]">
-                <nav>
-                    <h3>Welcome to AngolaDija</h3>
-                    <p>Your gateway to discovering Angola’s beauty starts with AngolaDija</p>
-                </nav>
-                <nav>
-
-                    <nav class="colunaForm">
-                        <label for="#">Name</label>
-                        <input type="text" name="" id="">
-                    </nav>
-                    <nav class="colunaForm">
-                        <label for="#">Username</label>
-                        <input type="text" name="" id="">
-                    </nav>
-                    <nav class="colunaForm">
-                        <label for="#">E-mail</label>
-                        <input type="text" name="" id="">
-                    </nav>
-                    <nav class="colunaForm">
-                        <label for="#">Password</label>
-                        <input type="text" name="" id="">
-                    </nav>
-                    <nav class="colunaForm">
-                        <label for="#">Confirm Password</label>
-                        <input type="text" name="" id="">
-                    </nav>
-                </nav>
-            </nav>
-        </div>
-    </form> -->
 </main>
 </body>
 </html>

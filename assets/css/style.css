@@ -19,6 +19,10 @@
     @apply bg-[#38b6ff] p-1.5 rounded-full font-inter font-[700] cursor-pointer text-white;
 }
 
+.lineMenuMobile {
+    @apply bg-[#38b6ff] h-1 w-8 m-1.5 rounded-full;
+}
+
 .btn0 {
     @apply bg-transparent;
 }
@@ -70,4 +74,28 @@
 
 .colunaForm {
     @apply flex flex-col;
+}
+
+.menu.active .navLinksMenu {
+    @apply pointer-events-auto translate-y-0;
+}
+
+.navInputsLabelFormLogin {
+    @apply flex flex-col-reverse pt-7;
+}
+
+.navInputsLabelFormLogin label {
+    @apply font-inter font-bold text-[9pt] ease-in-out duration-100 delay-75;
+}
+
+.navInputsLabelFormLogin input {
+    @apply outline-0 border-b-2 border-b-[#38b6ff] w-[95%];
+}
+
+.navInputsLabelFormLogin input:focus + label {
+    @apply text-[#38b6ff];
+}
+
+.forms {
+    @apply md:flex md:items-center md:justify-center md:bg-white m-4 border-2 border-[#38B6FF] p-[25px] backdrop-blur-xs md:w-[60%] bg-white;
 }
