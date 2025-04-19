@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -6,39 +6,68 @@
 /* #acb3b6 */
 
 @theme {
-    --font-rb: "Roboto", system-ui;    
+    --font-rb: "Roboto", system-ui; 
+    --font-anton: "Anton", system-ui;   
     --font-inter: "Inter", system-ui;
 }
 
-header.active .menuMobile {
-    @apply translate-x-0;
+.contentBtns {
+    @apply bg-blue-200 p-1.5 rounded-full;
 }
 
-header.active .lineMenuMobile:nth-child(2) {
-    @apply right-2
+.btn {
+    @apply bg-[#38b6ff] p-1.5 rounded-full font-inter font-[700] cursor-pointer text-white;
 }
 
+.btn0 {
+    @apply bg-transparent;
+}
+
+.linkMenu {
+    @apply font-inter;
+}
+
+
+.navForm {
+    @apply flex flex-col items-center;
+}
 
 .secao {
     @apply px-10;
 }
 
-.navBtns {
-    @apply bg-[#ACB3BC] p-2 w-max rounded-full;
+.cardHome {
+    @apply border-blue-200 border-2 p-2.5;
 }
 
-.button {
-    @apply bg-white p-2 rounded-full font-inter text-[14pt] border-2 border-[#38B6FF] text-[#38B6FF] hover:bg-[#38B6FF] hover:text-white cursor-pointer transition-all ease-in duration-100 hover:shadow-2xl hover:shadow-[#38B6FF];
+.navPlanningTrip {
+    @apply flex flex-col items-center gap-2 m-2 justify-between text-center p-1.5 ;
 }
 
-.button0 {
-    @apply bg-transparent;
+.navPlanningTrip input[type="text"] {
+    @apply text-center outline-0 border-x-0 border-t-0 border-b-[#96A7B4] border-2;
 }
 
-.linkMenu {
-    @apply text-[13pt] text-[#38B6FF];
+.navPlanningTrip input[type="radio"] {
+    @apply hidden;
 }
 
-.lineMenuMobile {
-    @apply bg-[#38B6FF] w-9 h-1 m-1 rounded-full relative;
+.navPlanningTrip input[type="radio"]:checked + .labelCustom {
+    @apply  text-white bg-[#38b6ff];
+}
+
+.navPlanningTrip .labelCustom{
+    @apply p-1.5 m-1.5 rounded-full border-2 border-[#38b6ff] font-inter font-medium shadow-[#38b6ff] shadow-[10px] cursor-pointer;
+}
+
+.contentInputsLabel {
+    @apply flex flex-wrap items-center justify-center;
+}
+
+.labelTitle {
+    @apply font-inter font-bold;
+}
+
+.colunaForm {
+    @apply flex flex-col;
 }

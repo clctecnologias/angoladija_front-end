@@ -17,33 +17,209 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="flex justify-between px-10 items-center font-inter font-bold text-2xl bg-[rgba(0, 0, 0, .4)] z-50 h-[4rem] fixed w-screen backdrop-blur-xs">
+    <header class="flex items-center justify-between p-10 h-[4rem]">
         <nav>
-            <a href="./"><h1 class="text-[#073753]">Angola<span class="relative top-1.5 font-extrabold text-[#38B6FF]">Dija</span></h1></a>
+            <a href="#"><img src="assets/img/logo.png" alt="" srcset="" class="w-[110px]"></a>
         </nav>
-        <nav class="absolute top-[4rem] flex flex-col bg-white z-10 justify-around h-[90vh] right-0 w-screen items-center translate-x-full menuMobile transition-transform ease">
-                <a href="#" class="linkMenu">Home Page</a>
-                <a href="#" class="linkMenu">About AngolaDija</a>
-                <a href="#" class="linkMenu">Destinations</a>
-                <a href="#" class="linkMenu">Trading Places</a>
-                <a href="#"><button class="button">Start Now</button></a>
+        <nav class="flex gap-5 items-center">
+            <a href="#" class="linkMenu">Destinations</a>
+            <a href="#" class="linkMenu">Who Are We?</a>
+            <a href="#" class="linkMenu">Trading Places</a>
+            <a href="#" class="linkMenu">Bookings</a>
+            <nav class="contentBtns">
+                <a href="#"><button class="btn btn0">Login</button></a>
+                <a href="#"><button class="btn">Start Planning Your Trip <i class="fa-solid fa-plane rotate-[-45deg]"></i></button></a>
+            </nav>
         </nav>
-        <nav class="menuHamburguer p-2 cursor-pointer">
+        <nav class="hidden">
             <div class="lineMenuMobile"></div>
             <div class="lineMenuMobile"></div>
             <div class="lineMenuMobile"></div>
         </nav>
     </header>
     <main>
-        <section class="pt-[4rem] secao">
-            <nav>
-                <h1 class="text-center font-bold text-[15pt] uppercase font-inter">Discover more about the main <span class="text-[#38B6FF]">Angolan</span> tourist <span class="text-[#38B6FF]">attractions.</span></h1>
-                <p class="text-center font-rb font-light">AngolaDija invites you to explore the unique beauty of Angola. This is your trusted guide to discovering the country’s most fascinating destinations, with tips, curiosities and itineraries that will inspire you to experience the best that Angola has to offer. Traveling around Angola has never been easier — with AngolaDija, the adventure starts here!</p>
+    <section class="secao flex items-center justify-between gap-8">
+        <nav class="max-w-[55%]">
+            <h5 class="text-[10pt] text-[#38B6FF] uppercase">
+                Your gateway to discovering Angola’s beauty starts with AngolaDija
+            </h5>
+            <h1 class="text-[30pt] font-inter font-extrabold">
+                Explore the Wonders of Angola — One Journey at a Time
+            </h1>
+            <p class="font-rb font-light mt-2 mb-6">
+                AngolaDija is your trusted guide to exploring Angola’s most captivating destinations.
+                With expertly curated recommendations, cultural insights, and well-structured itineraries,
+                we provide everything you need to experience the very best the country has to offer.
+                Traveling across Angola has never been more accessible, organized, and inspiring.
+                With AngolaDija, your journey begins with confidence and excellence.
+            </p>
+
+            <!-- BLOCO DE BENEFÍCIOS -->
+            <div class="flex gap-4">
+                <div class="cardHome">
+                    <i class="fas fa-map-marked-alt text-[#38B6FF] text-xl"></i>
+                    <div>
+                        <h4 class="font-semibold">Local Expertise</h4>
+                        <p class="text-sm font-light text-gray-700">Insider tips and hidden gems curated by locals.</p>
+                    </div>
+                </div>
+
+                <div class="cardHome">
+                    <i class="fas fa-route text-[#38B6FF] text-xl"></i>
+                    <div>
+                        <h4 class="font-semibold">Tailored Itineraries</h4>
+                        <p class="text-sm font-light text-gray-700">Routes and suggestions customized for your preferences.</p>
+                    </div>
+                </div>
+
+                <div class="cardHome">
+                    <i class="fas fa-language text-[#38B6FF] text-xl"></i>
+                    <div>
+                        <h4 class="font-semibold">Multilingual Support</h4>
+                        <p class="text-sm font-light text-gray-700">Travel guidance in Portuguese, English, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="max-w-[40%]">
+            <img src="assets/img/img_hero.png" alt="Travel illustration" class="w-full h-auto" />
+        </nav>
+    </section>
+    
+    <section class="secao">
+        <form action="#" class="bg-blue-100 border-2 border-[#38B6FF] p-2 flex flex-col justify-center items-center rounded-[10px] mb-6 relative">
+            <nav class="absolute top-[-15%]">
+                <h4 class="font-inter font-bold text-[20pt] text-center">Now You Can Start Planning Your Trip</h4>
             </nav>
-            <nav>
-                <img src="assets/img/img_hero.gif" alt="" srcset="">
+
+            <div class="flex items-center">
+
+                <nav class="navPlanningTrip">
+                    <label for="current_location" class="labelTitle">Tell Us Where You Are Now?</label>
+                    <input type="text" id="current_location" list="locations" name="current_location" placeholder="We Are With You">
+                    <datalist id="locations">
+                    <option value="Luanda">
+                    <option value="Uíge">
+                    <option value="Cuando">
+                    <option value="Moxico">
+                    <option value="Moxico-Leste">
+                    <option value="Namibe">
+                    <option value="Huambo">
+                    <option value="Malanje">
+                    <option value="Kwanza-Norte">
+                    <option value="Bengo">
+                    <option value="Zaire">
+                    <option value="Icolo e Bengo">
+                    <option value="Cabinda">
+                    <option value="Lunda-Norte">
+                    <option value="Kwanza-Sul">
+                    <option value="Huíla">
+                    <option value="Cubango">
+                    <option value="Lunda-Sul">
+                    <option value="Cunene">
+                    <option value="Benguela">
+                    </datalist>
+                </nav>
+
+                <nav class="navPlanningTrip">
+                    <label for="destinations" class="labelTitle">Where Do You Want to Go?</label>
+                    <nav>
+                        <input type="text" id="destinations" list="locations" name="destinations" placeholder="We Can Go Together?">
+                    </nav>
+                </nav>
+
+                <nav class="navPlanningTrip">
+                    <label class="labelTitle">What Are You Going to Do?</label>
+                    <nav class="contentInputsLabel">
+                        <input type="radio" name="activity" value="Leisure" id="leisure">
+                        <label for="leisure" class="labelCustom">Leisure <i class="fa-solid fa-gamepad"></i></label>
+                        <input type="radio" name="activity" value="Bussiness" id="bussiness">
+                        <label for="bussiness" class="labelCustom">Bussiness <i class="fa-solid fa-briefcase"></i></label>
+                        <input type="radio" name="activity" value="Study" id="study">
+                        <label for="study" class="labelCustom">Study <i class="fa-solid fa-graduation-cap"></i></label>
+                        <input type="radio" name="activity" value="Othher Activity" id="other">
+                        <label for="other" class="labelCustom">Other</label>
+                    </nav>
+                </nav>
+
+                <nav class="navPlanningTrip">
+                    <label class="labelTitle">How many people will travel?</label>
+                    <nav class="contentInputsLabel">
+                        <input type="radio" name="travelNumber" id="oneTraveler">
+                        <label for="oneTraveler" class="labelCustom">One Person</label>
+                        <input type="radio" name="travelNumber" id="twoPeople">
+                        <label for="twoPeople" class="labelCustom">Two People</label>
+                        <input type="radio" name="travelNumber" id="manyPeople">
+                        <label for="manyPeople" class="labelCustom">+3 People</label>
+                    </nav>
+                </nav>
+
+                <nav class="navPlanningTrip">
+                    <label class="labelTitle">Do You Have Pets?</label>
+                    <nav class="contentInputsLabel">
+                        <input type="radio" name="pets" id="yesPets" value="Yes Pets">
+                        <label for="yesPets" class="labelCustom">Yes, I Have Pets! <i class="fa-solid fa-dog"></i></label>
+                        <input type="radio" name="pets" id="noPets" value="No Pets">
+                        <label for="noPets" class="labelCustom">No, I Don't Have Pets!</label>
+                    </nav>
+                </nav>
+            </div>
+            <div>
+                <nav class="absolute m-auto">
+                    <button class="btn">Fly Right Now! <i class="fa-solid fa-plane rotate-[-45deg]"></i></button>
+                </nav>
+            </div>
+        </form>
+    </section>  
+
+    <section class="secao">
+        <nav>
+            <h2 class="subtitulo">We Offer Best Services</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio labore suscipit vitae reiciendis rerum repellat, rem, quaerat architecto, ducimus corrupti eveniet tempora. Deleniti, velit atque. Tenetur aliquid facilis recusandae corrupti!</p>
+        </nav>
+
+        <nav>
+            
+        </nav>
+    </section>
+
+    <!-- <form action="#">
+        <div class="flex items-center ">
+            <nav class="w-[40%]">
+                <img src="assets/img/bg1.jpg" alt="" srcset="">
             </nav>
-        </section>
-    </main>
+            <nav class="p-[20px] flex flex-col bg-red-500 h-[650px]">
+                <nav>
+                    <h3>Welcome to AngolaDija</h3>
+                    <p>Your gateway to discovering Angola’s beauty starts with AngolaDija</p>
+                </nav>
+                <nav>
+
+                    <nav class="colunaForm">
+                        <label for="#">Name</label>
+                        <input type="text" name="" id="">
+                    </nav>
+                    <nav class="colunaForm">
+                        <label for="#">Username</label>
+                        <input type="text" name="" id="">
+                    </nav>
+                    <nav class="colunaForm">
+                        <label for="#">E-mail</label>
+                        <input type="text" name="" id="">
+                    </nav>
+                    <nav class="colunaForm">
+                        <label for="#">Password</label>
+                        <input type="text" name="" id="">
+                    </nav>
+                    <nav class="colunaForm">
+                        <label for="#">Confirm Password</label>
+                        <input type="text" name="" id="">
+                    </nav>
+                </nav>
+            </nav>
+        </div>
+    </form> -->
+</main>
 </body>
 </html>
